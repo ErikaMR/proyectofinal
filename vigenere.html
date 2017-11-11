@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Cifrado Vigenère</title>
+	<meta charset="uft-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">	
+</head>
+		<br>
+		<h1 style="color:#1976d2"><b>Cifrado Vigenère</b></h1><br>
+		<p><b>Descripción: </b>
+		<br><br>
+		El cifrado de Vigenère es un cifrado de sustitución simple polialfabético. Este se ha reinventado muchas veces. El método original fue descrito por Giovan Battista, sin embargo fue atribuido más tarde a Blaise de Vigenère, en el siglo XIX. Por ello se le conoce como el Cifrado Vigenère. 
+		<br><br>Este cifrado es conocido porque es fácil de entender e implementar, además parece irresoluble. Esto lo hizo acreedor del apodo el código indescifrable
+		<br><br>
+		Algoritmo Cifrado: C = (M + K) mod |A|
+		<br>
+		Algoritmo Descifrado: M = (C - K) mod |A|
+		</p>
+  <body class="container">
+  			<form>
+  				<label><b>Inserta el alfabeto (A):</b></label>
+  				<br>
+  				<input class="form-control" type="text" size="25" maxlength=256 required/>
+  				<br>
+			  	<label><b>Inserta el mensaje a cifrar (M) o descifrar (C):</b></label>
+			  	<br>
+			  	<input class="form-control" type="text" size="25" maxlength=256 required/>
+			  	<br>
+			  	<label><b>Inserta la clave (K):</b></label>
+			  	<br>
+			  	<input class="form-control" type="number" size="256"/>
+			  	<br><br>
+			  	<button class="btn btn-primary" type="reset"> <b>Limpiar</b></button>
+			  	<br><br>
+		  	</form>
+			  	<button class="btn btn-primary" onclick="cifrar()" ><b>Encriptar</b></button>
+			  	<button class="btn btn-primary" onclick="descifrar()" ><b>Desencriptar</b></button>
+			  	<br><br>
+		  	<label><b>Resultado:</b></label>
+		  	<p type="text" id="resultado" disabled></p>
+		  	<br><br><br>
+		  	<a href="/index.html"><button class="btn btn-primary">Menú Principal</button></a> 
+	    <script src="bundle.js"></script>
+
+	<script scr="app.js">
+		
+		function cifrar(){
+			var alfabeto = document.getElementsByTagName("input")[0].value; 
+			alfabeto = alfabeto.toUpperCase();
+			longalfabeto = alfabeto.length;
+			var mensaje = document.getElementsByTagName("input")[1].value; 
+			cadena = cadena.toUpperCase();
+			var clave = document.getElementsByTagName("input")[2].value;
+
+			//Aquí imprime resultado final ---> document.getElementById('resultado').innerHTML =     ;  
+		}
+
+		function descifrar(elemento){
+			var alfabeto = document.getElementsByTagName("input")[0].value; 
+			alfabeto = alfabeto.toUpperCase();
+			longalfabeto = alfabeto.length;
+			var mensaje = document.getElementsByTagName("input")[1].value; 
+			cadena = cadena.toUpperCase();
+			var clave = document.getElementsByTagName("input")[2].value; 
+
+			//Aquí imprime resultado final ---> document.getElementById('resultado').innerHTML =     ;
+		}
+
+	</script>
+  </body>
+</html>
